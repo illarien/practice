@@ -4,6 +4,7 @@ import java.util.*;
 public class Decoder {
 
 	public static Node root;
+	public static Tree tree = new Tree();
 	
 	public static boolean isnumber (String in) {
 		HashSet<String> str = new HashSet<String>(Arrays.asList("1", "2","3","4","5","6","7","8","9","0")); 
@@ -32,16 +33,17 @@ public class Decoder {
 				
 				out += numToLet(v[i]);
 				out += rest(i, v);
-				break;
+				Node newNode = new Node(k+1, out);
+				node.addLeft(newNode);
+				//decodeNode(node.addLeft(newNode));
 				
 			} else {
 				out += v[i];
 			}
-			
+			if (k > 5) return;
+			System.out.println(k);
 		}
-		Node left = new Node(k+1, out);
-		node.leftChild = left;
-		decodeNode(left);
+		
 		
 	}
 	
@@ -57,6 +59,7 @@ public class Decoder {
 	
 	public static void main(String[] args) {
 		String word = "1127";
+		//tree.addNode(1, word);
 		root = new Node(1, word);
 		//root.leftChild = new Node(2, "aaa");
 		

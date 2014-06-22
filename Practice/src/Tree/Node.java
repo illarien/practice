@@ -31,4 +31,9 @@ public class Node {
 	public boolean hasRight() {
 		return rightChild != null;
 	}
+
+	public Node addLeft(Node node) {
+		leftChild = node;
+		return leftChild;
+	}
 }
