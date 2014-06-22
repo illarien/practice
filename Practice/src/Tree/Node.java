@@ -36,4 +36,9 @@ public class Node {
 		leftChild = node;
 		return leftChild;
 	}
+
+    public Node addRight(Node node) {
+        rightChild = node;
+        return rightChild;
+    }
 }
