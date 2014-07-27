@@ -20,7 +20,8 @@ public class Main extends Parent {
 	//Aggregation
 	private static Aggregation agg;
 	private void setPrintAgg (Aggregation agg) {
-		this.agg = agg;
+		//this.agg = agg;
+		Main.agg = agg;
 	}
 	
 	
@@ -35,7 +36,7 @@ public class Main extends Parent {
 		
 		System.out.println("-----");
 		
-		Main main = new Main(new Composition()); // Composition
+		new Main(new Composition()); // Composition
 		printCompos();
 		
 		System.out.println("-----");
