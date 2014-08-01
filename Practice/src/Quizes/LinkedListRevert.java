@@ -31,6 +31,9 @@ public class LinkedListRevert {
 		}
 		System.out.println(lo);
 		
+		//lo.clear();
 	}
-
+	
+	
+	
 }

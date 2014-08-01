@@ -64,5 +64,9 @@ class WrdsAndChrs {
 		  
 	  }
 	  System.out.println("Answ: " + answ + " " + counter);
+	  
+	  
+	  
+	  
   }
 }
