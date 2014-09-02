@@ -33,6 +33,11 @@ public class OddElementGenerics {
 		System.out.println(getOddElement(integ));
 		System.out.println(getOddElement(words));
 		System.out.println(getOddElement(nul));
+		
+		String hi = "Hello World";
+		System.out.println(
+				new StringBuilder(hi).reverse().toString() );
+		
 	}
 
 }
