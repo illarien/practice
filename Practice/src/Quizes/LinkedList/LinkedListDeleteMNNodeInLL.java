@@ -1,4 +1,4 @@
-package QuizesOld;
+package Quizes.LinkedList;
 
 // Delete m nodes after n nodes
 

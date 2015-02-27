@@ -1,4 +1,5 @@
-package LogAnalizerForNate;
+package LogAnalizer;
+
 public class Data implements Comparable {
 		Integer counter;
 		String except;

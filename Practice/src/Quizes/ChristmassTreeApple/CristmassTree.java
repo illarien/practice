@@ -1,4 +1,4 @@
-package Quizes;
+package Quizes.ChristmassTreeApple;
 
 public class CristmassTree {
 

@@ -1,4 +1,4 @@
-package QuizesOld;
+package Quizes.LinkedList;
 
 // Merge two sorted linkedlist
 

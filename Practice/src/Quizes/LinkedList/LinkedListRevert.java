@@ -1,4 +1,4 @@
-package Quizes;
+package Quizes.LinkedList;
 
 import java.util.LinkedList;
 import java.util.PriorityQueue;

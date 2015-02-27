@@ -1,4 +1,4 @@
-package Tree;
+package DecoderTree;
 import java.util.*;
 
 public class Decoder {

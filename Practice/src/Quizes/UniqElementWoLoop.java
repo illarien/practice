@@ -1,4 +1,4 @@
-package Q;
+package Quizes;
 
 /*
  * Write a program to find the distinct elements out of an array but not using loop, using XOR

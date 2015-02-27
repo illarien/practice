@@ -1,4 +1,4 @@
-package QuizesOld;
+package Quizes.LinkedList;
 
 import java.util.LinkedList;
 

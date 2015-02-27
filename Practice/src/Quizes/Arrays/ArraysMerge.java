@@ -1,4 +1,4 @@
-package QuizesOld;
+package Quizes.Arrays;
 
 //Given two sorted integer arrays (with duplicates in each array possible),
 //return the union of the two arrays in sorted order with no duplicates.

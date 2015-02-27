@@ -1,8 +1,8 @@
-package Q;
+package Quizes.Arrays;
 import java.util.*;
 
 
-public class Arr {
+public class ArrayGenerator {
 
 	public static int[] generateArray(int leng) {
 		int[] out = new int[leng];

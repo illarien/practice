@@ -1,4 +1,4 @@
-package Q;
+package Quizes;
 
 import java.util.*;
 import java.io.DataInputStream;
@@ -14,10 +14,18 @@ import java.io.FileOutputStream;
 
 public class IntStrms {
 
+	/**
+	 * Two arrays to create streams and List of streams
+	 */
 	static int[] arr = {1,2,4,5,7,9,13};
 	static int[] arr2 = {0,3,6,8,10,11,12,14,15,16};
 	static ArrayList<DataInputStream> streams = new ArrayList<DataInputStream>();
 	
+	/**
+	 * Create Stream from array
+	 * @param arr - source data array
+	 * @param n - number of stream for file name
+	 */
 	private static void createStream(int[] arr, int n) {
 		String file = "tmp"+ n +".txt";
 		try {
@@ -35,6 +43,12 @@ public class IntStrms {
 	static int smallest;
 	static List<Integer> output = new ArrayList<Integer>();
 	
+	/**
+	 * Fill empty cache from given streams
+	 * @param streams - List of Streams
+	 * @return - List of Integer - cache
+	 * @throws Exception
+	 */
 	private static ArrayList<Integer> fillCache(ArrayList<DataInputStream> streams) throws Exception {
 		ArrayList<Integer> out = new ArrayList<Integer>();
 		for (DataInputStream s: streams) {
@@ -46,6 +60,10 @@ public class IntStrms {
 		return out;
 	}
 	
+	/**
+	 * Get smallest Integer from List
+	 * @param lin - List of Integer
+	 */
 	private static void getSmallest(List<Integer> lin) {
 		int tempIndex = 0;		
 		for (int i = 1; i < lin.size(); i++) {
@@ -57,6 +75,12 @@ public class IntStrms {
 		smallest = lin.get(tempIndex);
 	}
 	
+	/**
+	 * Refill cache after getting smallest Integer
+	 * @param ind - index of Integer(Stream) that was got
+	 * @param streams - List of Streams
+	 * @throws Exception
+	 */
 	private static void refillCache(int ind, ArrayList<DataInputStream> streams)  throws Exception {
 		try {
 			int value = streams.get(ind).readInt();
@@ -78,11 +102,6 @@ public class IntStrms {
 			streams.add(s1);
 			streams.add(s2);
 			
-//			int val;
-//			while ( (val = s2.readInt()) != -1) {
-//				System.out.println("S: " + val);
-//			}
-			
 					
 			cache = fillCache(streams);
 			
@@ -96,11 +115,6 @@ public class IntStrms {
 				System.out.println("Ch2: " + cache);
 				System.out.println("Output: " + output);
 			}
-			
-			
 		} catch (Exception e) {}
-			
-
 	}
-
 }

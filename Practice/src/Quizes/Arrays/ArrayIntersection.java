@@ -1,9 +1,8 @@
-package QuizesOld;
+package Quizes.Arrays;
 
 // Intersection of to arrays
 
 import java.util.*;
-
 
 
 public class ArrayIntersection {

@@ -1,4 +1,4 @@
-package QuizesOld;
+package Quizes.Arrays;
 
 // not finished, may be wrong idea, just use map
 

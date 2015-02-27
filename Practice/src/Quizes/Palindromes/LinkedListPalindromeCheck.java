@@ -1,4 +1,4 @@
-package Q;
+package Quizes.Palindromes;
 
 import java.util.*;
 

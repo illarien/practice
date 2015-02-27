@@ -1,4 +1,4 @@
-package Q;
+package Quizes.Arrays;
 
 public class ReversDoublArr {
 

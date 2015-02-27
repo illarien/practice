@@ -1,8 +1,8 @@
-package Q;
+package Quizes.Arrays;
 
 //count "1s" ({234,-11,-105,23841,101010,705})
 
-public class ArrayCounts {
+public class ArrayCount1sInArray {
 
 	public static void main(String[] args) {
 		int[] arr = {234,-11,-105,23841,101010,705};

@@ -1,4 +1,4 @@
-package SumoL;
+package Quizes.Palindromes.FindAllPalindromesSumoL;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package Tree;
+package DecoderTree.OldTreeSolution;
 
 public class BinaryTree {
 

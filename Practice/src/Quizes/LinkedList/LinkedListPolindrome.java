@@ -1,4 +1,4 @@
-package QuizesOld;
+package Quizes.LinkedList;
 // check List for polindrome
 
 import java.util.*;

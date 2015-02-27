@@ -1,4 +1,4 @@
-package QuizesOld;
+package Quizes.LinkedList;
 
 // Reverse LinkedList - stack
 

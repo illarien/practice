@@ -1,4 +1,5 @@
-package Quizes;
+package Quizes.LinkedList;
+
 
 
 // List To revert

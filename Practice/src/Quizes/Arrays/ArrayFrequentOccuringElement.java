@@ -1,4 +1,4 @@
-package QuizesOld;
+package Quizes.Arrays;
 
 // Find most frequently occurring element in an Array
 

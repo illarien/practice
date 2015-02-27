@@ -1,4 +1,4 @@
-package Q;
+package Quizes.DataStructureSumoL;
 
 import java.util.ArrayList;
 import java.util.HashMap;

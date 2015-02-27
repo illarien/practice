@@ -1,4 +1,6 @@
-package Q;
+package Quizes.DataStructureSumoL;
+
+
 
 /*
  * Design data structure with add, remove, contains, recent, random complexity O(1)

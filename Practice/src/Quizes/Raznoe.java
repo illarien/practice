@@ -1,4 +1,4 @@
-package Q;
+package Quizes;
 
 // Strings - reverse, reverse words in string, remove char from string
 

@@ -1,4 +1,6 @@
-package Parent;
+package Quizes.ParentArgCompDeleg;
+
+
 
 public class Main extends Parent {
 

@@ -1,4 +1,4 @@
-package Tree;
+package DecoderTree;
 
 public class Node {
 	int key;

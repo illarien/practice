@@ -1,13 +1,12 @@
-package Q;
-
-/**
- * Google: Iterate thru list of iterators
- */
+package Quizes;
 
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+/**
+ * Google: Iterate thru list of iterators
+ */
 public class IterateIterators {
 	
 	static LinkedList<Integer> l1 = new LinkedList<Integer>();

@@ -1,4 +1,4 @@
-package Fibonacci;
+package Quizes.Fibonacci;
 
 public class FibSimple {
 

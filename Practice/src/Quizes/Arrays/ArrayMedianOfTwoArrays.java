@@ -1,4 +1,4 @@
-package Q;
+package Quizes.Arrays;
 
 import java.util.Arrays;
 

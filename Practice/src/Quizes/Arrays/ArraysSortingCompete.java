@@ -1,4 +1,4 @@
-package QuizesOld;
+package Quizes.Arrays;
 
 // Sorting - comparing of types of sorting
 

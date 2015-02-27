@@ -1,8 +1,8 @@
-package Q;
+package Quizes.Palindromes;
 
 // Palindrome performance test
 
-public class PolindromeTestPerformance {
+public class PalindromeTestPerformance {
 
 	public static boolean checkP1 (String in) {
 		return in.equals( new StringBuilder(in).reverse().toString());

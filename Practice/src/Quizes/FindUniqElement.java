@@ -1,15 +1,21 @@
-package Q;
+package Quizes;
 
 import java.util.*;
 
-// Find unique element
-
-
+/**
+ * Find unique element in List<Object>
+ * 1,2,3,2,3,1,7 -> 7
+ * #Amazon
+ */
 public class FindUniqElement {
 
-	public static <T> void find (List<T> in) {
+	/**
+	 * find unique element in List<T>
+	 * @param input - list of elements
+	 */
+	public static <T> void find (List<T> input) {
 		HashSet<T> hs = new HashSet<T>();
-		for (T elem: in) {
+		for (T elem: input) {
 			if ( hs.contains(elem)) {
 				hs.remove(elem);
 			} else {

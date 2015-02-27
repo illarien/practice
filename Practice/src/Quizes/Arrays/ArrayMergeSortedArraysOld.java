@@ -1,4 +1,4 @@
-package QuizesOld;
+package Quizes.Arrays;
 
 // merge sorted array old
 

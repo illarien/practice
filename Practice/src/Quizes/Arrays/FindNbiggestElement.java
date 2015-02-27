@@ -1,9 +1,10 @@
-package Q;
+package Quizes.Arrays;
+
 import java.util.Arrays;
+
 //ravikanth.konda@citrix.com
 // find n-th biggest element in union of two sorted arrays
-
-public class FindElement {
+public class FindNbiggestElement {
 
 	public static int findElement2(int[] a1, int[] a2, int n ) {		
 		

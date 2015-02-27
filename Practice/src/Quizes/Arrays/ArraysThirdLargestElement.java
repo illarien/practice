@@ -1,4 +1,4 @@
-package QuizesOld;
+package Quizes.Arrays;
 
 // find third largest element of a array in a single pass?
 

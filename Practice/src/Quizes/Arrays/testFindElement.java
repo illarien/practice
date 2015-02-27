@@ -1,4 +1,4 @@
-package Q;
+package Quizes.Arrays;
 import static org.junit.Assert.*;
 
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package Tree;
+package DecoderTree.OldTreeSolution;
 
 import java.util.Arrays;
 import java.util.HashSet;

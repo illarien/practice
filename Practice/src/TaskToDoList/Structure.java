@@ -1,4 +1,4 @@
-package Stucture;
+package TaskToDoList;
 
 import Tree.Node;
 
@@ -8,12 +8,12 @@ import Tree.Node;
 //
 //-list of objects already exists
 //----
-//1. Input req: ÒBuy a bicycleÓ
-//ÒGo to the mallÓ
+//1. Input req: ï¿½Buy a bicycleï¿½
+//ï¿½Go to the mallï¿½
 //
 //List: 0
-//List: 1 - ÒBuy a BicycleÓ
-//List: 2 -  ÒBuy a BicycleÓ, ÒGo to the mallÓ
+//List: 1 - ï¿½Buy a Bicycleï¿½
+//List: 2 -  ï¿½Buy a Bicycleï¿½, ï¿½Go to the mallï¿½
 
 public class Structure {
 	
@@ -72,9 +72,9 @@ class TaskList {
 	
 	public void add(ListItem item, int position) {
 //		check correctness of position;
-//		iterate to Òpos-1Ó element;
-//		change pointer Òpos-1Ó (nextTask) to item
-//		set pointer (nextTask) for item to ÒposisionÓ item 
+//		iterate to ï¿½pos-1ï¿½ element;
+//		change pointer ï¿½pos-1ï¿½ (nextTask) to item
+//		set pointer (nextTask) for item to ï¿½posisionï¿½ item 
 	}
 	
 	public void findTask(String task) { }

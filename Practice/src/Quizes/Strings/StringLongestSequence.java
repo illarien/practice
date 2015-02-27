@@ -1,4 +1,4 @@
-package Q;
+package Quizes.Strings;
 
 //Find the longest sequence of prefix shared by all the words in a string. 
 //"abcdef abcdxxx abcdabcdef abcyy" => "abc"

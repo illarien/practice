@@ -1,4 +1,4 @@
-package Parent;
+package Quizes.ParentArgCompDeleg;
 
 public class Delegation {
 

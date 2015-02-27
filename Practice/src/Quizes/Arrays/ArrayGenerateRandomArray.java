@@ -1,4 +1,4 @@
-package QuizesOld;
+package Quizes.Arrays;
 
 import java.io.IOException;
 import java.util.*;

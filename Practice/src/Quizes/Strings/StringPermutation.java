@@ -1,4 +1,4 @@
-package Quizes;
+package Quizes.Strings;
 
 public class StringPermutation {
 

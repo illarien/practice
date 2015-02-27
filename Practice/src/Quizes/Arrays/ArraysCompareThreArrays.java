@@ -1,4 +1,4 @@
-package QuizesOld;
+package Quizes.Arrays;
 
 // duplicates in arrays
 

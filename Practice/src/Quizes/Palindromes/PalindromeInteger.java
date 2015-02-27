@@ -1,8 +1,8 @@
-package Quizes;
+package Quizes.Palindromes;
 
 import java.util.ArrayList;
 
-public class Palindrome {
+public class PalindromeInteger {
 	
 	static int counter = 0;
 	static final int end = 10001;

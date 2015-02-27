@@ -1,10 +1,10 @@
-package Q;
+package Quizes;
 
 /** Implement #replaceAll.
 // You are only allowed to use the length() and charAt(int i) methods on the String class.
  */
  
-public class SalFor {
+public class ReplaceAllSalFor {
 
 
     /**

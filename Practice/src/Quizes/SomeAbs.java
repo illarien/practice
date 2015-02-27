@@ -1,4 +1,4 @@
-package Q;
+package Quizes;
 
 public interface SomeAbs {
 
