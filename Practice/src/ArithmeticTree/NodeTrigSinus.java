@@ -1,4 +1,4 @@
-package Arithmetic;
+package ArithmeticTree;
 
 public class NodeTrigSinus extends NodeTrig {
 	

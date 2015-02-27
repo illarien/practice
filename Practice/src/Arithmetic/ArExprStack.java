@@ -1,4 +1,4 @@
-package ArithmeticalExpressiion;
+package Arithmetic;
 
 import java.util.ArrayList;
 
