@@ -1,4 +1,4 @@
-package Quizes;
+package Quizes.ParentArgCompDeleg;
 
 public class Static {
 

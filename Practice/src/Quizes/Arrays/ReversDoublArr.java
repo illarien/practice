@@ -1,5 +1,13 @@
 package Quizes.Arrays;
 
+/**
+ * mmmmmmm | n
+ * mmmmmmm | n
+ * mmmmmmm | n
+ * mmmmmmm | n
+ *
+ */
+
 public class ReversDoublArr {
 
 	public static int[][] fillArray(int n, int m) {
