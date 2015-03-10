@@ -10,7 +10,9 @@ public class ArraysSortingMerge {
 
 		mergSort(ar, 0, ar.length-1);
 
-		for (int z=0; z< ar.length;z++){System.out.print(ar[z] + " ");}	
+		for (int z = 0; z < ar.length; z++){
+			System.out.print(ar[z] + " ");
+		}	
 	}
 
 	public static void mergeSegm(int[] ar, int st1, int end1, int st2, int end2) {
@@ -43,8 +45,12 @@ public class ArraysSortingMerge {
 	}
 	
 	public static void mergSort(int[] a, int p, int r) {
-		if ( r-p <1 ) {return;}
-		else if (r-p < 2) {compAndSwapXOR(a, p, r); return;}
+		if ( r-p <1 ) {
+			return;
+		}
+		else if (r-p < 2) {
+			compAndSwapXOR(a, p, r); return;
+		}
 		else {
 			int q = (r-p)/2;
 //			System.out.println("Q " + q);
@@ -54,7 +60,7 @@ public class ArraysSortingMerge {
 		}
 	}
 
-	public static void compAndSwapXOR(int [] a, int i, int j){
+	public static void compAndSwapXOR(int [] a, int i, int j) {
 		if (i < j && a[i] > a[j]) {
 			a[i] ^= a[j];
 			a[j] = a[i] ^ a[j];

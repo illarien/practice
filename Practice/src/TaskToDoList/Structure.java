@@ -1,6 +1,6 @@
 package TaskToDoList;
 
-import Tree.Node;
+import DecoderTree.Node;
 
 //Create a ToDo list app.
 //
@@ -18,7 +18,7 @@ import Tree.Node;
 public class Structure {
 	
 	public static void main(String[] args) {
-		TaskList tl = new TaskList();
+		TaskList2 tl = new TaskList2();
 		
 		System.out.println("add t1");
 		tl.addItem(new ListItem("Task1") );
@@ -38,7 +38,7 @@ public class Structure {
 	
 }
 
-class TaskList {
+class TaskList2 {
 	ListItem firstTask;	
 	//ListItem current; //iterator
 	//ListItem nextTask;

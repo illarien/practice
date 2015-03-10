@@ -42,10 +42,18 @@ b, 1
  */
 public class DataStructure {
 	
+	// Transaction id counter
 	private static Integer txID = 0;
+	// Rollbacks history
 	private static Stack<Integer> rollbacks = new Stack<Integer>();
+	// Main data structure
 	private static HashMap<String, Stack<Transaction>> db;
 	
+	/**
+	 * Add value to ds
+	 * @param key
+	 * @param value
+	 */
 	public void set(String key, String value) {
 	    if (db == null) {
 	        db = new HashMap<String, Stack<Transaction>>();
@@ -57,17 +65,29 @@ public class DataStructure {
 	    db.get(key).add(new Transaction(value, txID));
 	} 
 
+	/**
+	 * Get value by key
+	 * @param key
+	 * @return
+	 */
 	public String get(String key) {
 	    if (!db.containsKey(key)) {
 	        return null;
 	    }
-	    return db.get(key).peek().getValue(); // .get(size()-1).getLast();
+	    return db.get(key).peek().getValue();
 	}
 	
+	/**
+	 * Set "begin" point
+	 */
 	public void begin() {
 		rollbacks.push(txID);
+		System.out.println("Set new rollback marker at tx#: " + txID);
 	}
 	
+	/**
+	 * Rollback all data to previous set point
+	 */
 	public void rollback() {
 		if (rollbacks.isEmpty()) {
 			System.out.println("No rollbacks points");
@@ -75,7 +95,7 @@ public class DataStructure {
 		}
 		
 		int txIdToRollback = rollbacks.pop();
-		System.out.println("Rollback to: " + txIdToRollback);
+		System.out.println("Rollback to tx#: " + txIdToRollback);
 		Stack<String> keysToRemove = new Stack<String>();
 		for (Map.Entry<String, Stack<Transaction>> e: db.entrySet()) {
 			rollbackValues(e.getValue(), txIdToRollback);
@@ -86,8 +106,12 @@ public class DataStructure {
 		while (!keysToRemove.isEmpty()) {
 			db.remove(keysToRemove.pop());
 		}
+		txID = txIdToRollback;
 	}
 	
+	/**
+	 * DS to string.
+	 */
 	public String toString() {
 		StringBuilder out = new StringBuilder();
 		for (Map.Entry<String, Stack<Transaction>> e: db.entrySet()) {
@@ -96,6 +120,11 @@ public class DataStructure {
 		return out.toString();
 	}
 
+	/**
+	 * Get history for value
+	 * @param list
+	 * @return
+	 */
 	private String getValueInList(List<Transaction> list) {
 		StringBuilder out = new StringBuilder();
 		ListIterator<Transaction> iterator = list.listIterator();
@@ -105,6 +134,11 @@ public class DataStructure {
 		return out.toString();
 	}
 	
+	/**
+	 * Rollback value.
+	 * @param stack
+	 * @param txToRollback
+	 */
 	private void rollbackValues(Stack<Transaction> stack, int txToRollback) {
 		while (!stack.isEmpty()) {
 			if (stack.peek().getTxId() <= txToRollback ) {
@@ -113,13 +147,15 @@ public class DataStructure {
 			if (stack.peek().getTxId() > txToRollback) {
 				stack.pop();
 			}
-//			if (stack.isEmpty()) {
-//				stack = null;
-//			}
 		}
 	}
 }
 
+/**
+ * Data structure for value + txId
+ * @author chekhovs
+ *
+ */
 class Transaction {
 	private String value;
 	private Integer txId;

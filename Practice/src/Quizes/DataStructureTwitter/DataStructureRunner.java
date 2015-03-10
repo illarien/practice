@@ -4,7 +4,7 @@ public class DataStructureRunner {
 
 	public static void main(String[] args) {
 		DataStructure ds = new DataStructure();
-
+		ds.begin();
 		ds.set("a", "1");
 		ds.begin();
 		ds.set("a", "2");
@@ -19,6 +19,9 @@ public class DataStructureRunner {
 		ds.set("c", "101");
 		System.out.println(ds.toString());
 //		System.out.println(ds.get("a"));
+		System.out.println("---");
+		ds.rollback();
+		System.out.println(ds.toString());
 		System.out.println("---");
 		ds.rollback();
 		System.out.println(ds.toString());

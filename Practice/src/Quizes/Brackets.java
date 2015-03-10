@@ -12,13 +12,9 @@ public class Brackets {
 	
 	public static void permutation(String pref, String str) {
 		int n = str.length();
-		
-		
-		if (n == 0) {
-						
-			//System.out.println(pref);
-			if (checkBrackets(pref)) { hs.add(pref);}
 
+		if (n == 0) {						
+			if (checkBrackets(pref)) { hs.add(pref);}
 		} else {
 			for(int i = 0; i < n; i++) {
 				permutation(pref + str.charAt(i), str.substring(0, i) + str.substring(i+1, n));
