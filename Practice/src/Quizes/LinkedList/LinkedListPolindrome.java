@@ -46,6 +46,7 @@ public class LinkedListPolindrome {
 		l.add("cba");
 		
 		chechForPolindrome( listToString(l) );
+		System.out.println(l);
 	}
 	
 }

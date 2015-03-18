@@ -49,8 +49,7 @@ public class IterateIterators {
 		l3.addAll(Arrays.asList(new Integer[]{3,3,3,3,3,3}));
 		l4.addAll(Arrays.asList(new Integer[]{4,4,4}));
 		iterators.addAll(Arrays.asList(new Iterator[]{l1.listIterator(), l2.listIterator(),l3.listIterator(), l4.listIterator()}));
-		
-		
+				
 		iterateIterators(iterators);
 
 	}

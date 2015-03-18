@@ -17,8 +17,8 @@ public class IntStrms {
 	/**
 	 * Two arrays to create streams and List of streams
 	 */
-	static int[] arr = {1,2,4,5,7,9,13};
-	static int[] arr2 = {0,3,6,8,10,11,12,14,15,16};
+	static final int[] arr = {1,2,4,5,7,9,13};
+	static final int[] arr2 = {0,3,6,8,10,11,12,14,15,16};
 	static ArrayList<DataInputStream> streams = new ArrayList<DataInputStream>();
 	
 	/**
@@ -27,9 +27,9 @@ public class IntStrms {
 	 * @param n - number of stream for file name
 	 */
 	private static void createStream(int[] arr, int n) {
-		String file = "tmp"+ n +".txt";
+		final String file = "tmp"+ n +".txt";
 		try {
-			DataOutputStream s = new DataOutputStream(new FileOutputStream(file));
+			final DataOutputStream s = new DataOutputStream(new FileOutputStream(file));
 			for (int i = 0; i < arr.length; i++) {
 				s.writeInt(arr[i]);
 			}
@@ -52,7 +52,7 @@ public class IntStrms {
 	private static ArrayList<Integer> fillCache(ArrayList<DataInputStream> streams) throws Exception {
 		ArrayList<Integer> out = new ArrayList<Integer>();
 		for (DataInputStream s: streams) {
-			int value;
+			final int value;
 			if ((value = s.readInt()) != -1) {
 				out.add(value);
 			}
@@ -83,7 +83,7 @@ public class IntStrms {
 	 */
 	private static void refillCache(int ind, ArrayList<DataInputStream> streams)  throws Exception {
 		try {
-			int value = streams.get(ind).readInt();
+			final int value = streams.get(ind).readInt();
 			cache.set(ind, value);
 		} catch (Exception e) {
 			cache.remove(ind);
@@ -106,13 +106,13 @@ public class IntStrms {
 			cache = fillCache(streams);
 			
 			while (streams.size() > 0) {
-				System.out.println("Cache: " + cache);
+				System.out.println("Cache before: " + cache);
 				getSmallest(cache);
-				System.out.println(index + " " + smallest);
+				System.out.println("Smallest: index: " + index + " value: " + smallest);
 				output.add(smallest);
 //				System.out.println("added");
 				refillCache(index, streams);
-				System.out.println("Ch2: " + cache);
+				System.out.println("Cache after: " + cache);
 				System.out.println("Output: " + output);
 			}
 		} catch (Exception e) {}
