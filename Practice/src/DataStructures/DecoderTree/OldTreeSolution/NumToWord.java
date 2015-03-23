@@ -1,4 +1,4 @@
-package DecoderTree.OldTreeSolution;
+package DataStructures.DecoderTree.OldTreeSolution;
 
 import java.util.*;
 

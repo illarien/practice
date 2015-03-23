@@ -1,4 +1,4 @@
-package Quizes.DataStructureTwitter;
+package DataStructures.DataStructureTwitter;
 
 public class DataStructureRunner {
 

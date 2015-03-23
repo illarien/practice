@@ -1,6 +1,6 @@
-package ArithmeticTree;
+package DataStructures.ArithmeticTree;
 
-import ArithmeticTree.Node.EvaluationException;
+import DataStructures.ArithmeticTree.Node.EvaluationException;
 
 public class Main {
 

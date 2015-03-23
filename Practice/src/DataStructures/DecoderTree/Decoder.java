@@ -1,4 +1,4 @@
-package DecoderTree;
+package DataStructures.DecoderTree;
 import java.util.*;
 
 public class Decoder {

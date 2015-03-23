@@ -1,4 +1,4 @@
-package ArithmeticTree;
+package DataStructures.ArithmeticTree;
 
 public class NodeDivision extends NodeOperator {
 	

@@ -1,4 +1,4 @@
-package DecoderTree;
+package DataStructures.DecoderTree;
 
 import java.util.Arrays;
 import java.util.HashSet;

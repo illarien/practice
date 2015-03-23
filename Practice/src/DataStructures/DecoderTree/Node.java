@@ -1,4 +1,4 @@
-package DecoderTree;
+package DataStructures.DecoderTree;
 
 public class Node {
 	int key;

@@ -1,4 +1,4 @@
-package Quizes.DataStructureTwitter;
+package DataStructures.DataStructureTwitter;
 
 import java.util.*;
 
