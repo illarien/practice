@@ -2,7 +2,9 @@ package DataStructures.Trie2;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Iterator;
 
 public class Node<T> {
 
@@ -11,7 +13,7 @@ public class Node<T> {
 	
 	public Node (T value) {
 		this.mValue = value;
-		children = new HashMap<Character, Node<T>>();
+		this.children = new HashMap<Character, Node<T>>();
 	}
 	
 	public void addChild (Character key, T value) {
@@ -72,4 +74,23 @@ public class Node<T> {
 		}
 		return result;
 	}
+	
+	public void print() {
+        print("", true);
+    }
+
+    private void print(String prefix, boolean isTail) {
+        System.out.println(prefix + (isTail ? "└── " : "├── ") + (mValue == null? "no value" : mValue.toString()) );       
+        Iterator<Entry<Character, Node<T>>> iter = children.entrySet().iterator();
+        for (int i = 0; i < children.size() - 1; i++) {
+        	if (iter.hasNext()) {
+        		Map.Entry<Character, Node<T>> pair = (Map.Entry<Character, Node<T>>)iter.next();
+                ((Node<T>) pair.getValue()).print(prefix + (isTail ? "    " : "│   "), false);
+        	}
+        }
+        if (children.size() > 0 && iter.hasNext()) {
+        	Map.Entry<Character, Node<T>> pair = (Map.Entry<Character, Node<T>>)iter.next();
+        	((Node<T>) pair.getValue()).print(prefix + (isTail ?"    " : "│   "), true);
+        }
+    }
 }

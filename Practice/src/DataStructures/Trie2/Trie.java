@@ -5,9 +5,13 @@ import java.util.HashSet;
 
 public class Trie<T> {
 	
-	private Node<T> root = new Node<T>(null);
+	private Node<T> root = new Node<T>((T) "ROOT");
 	
 	public Trie () {
+	}
+	
+	public Node<T> getRoot() {
+		return root;
 	}
 	
 	public void add(String key, T value) {
@@ -21,7 +25,7 @@ public class Trie<T> {
 		for (int i =0; i < k.length; i++) {
 			Node<T> tmp = pointer.getNode(k[i]);
 			if (tmp == null) {
-				pointer.addChild(k[i], null); //(T)(""+k[i]) );
+				pointer.addChild(k[i], (T)(""+k[i]) );
 				pointer = pointer.getNode(k[i]);
 			} else {
 				pointer = pointer.getNode(k[i]);

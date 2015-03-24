@@ -24,6 +24,9 @@ public class Runner {
 		System.out.println(trie.getKeySet());
 		System.out.println(trie.getValueSet());
 		System.out.println(trie.getValueSet( trie.getNode("w")) + " : " + trie.size(trie.getNode("w")) );
+		System.out.println();
+		trie.getRoot().print();
+		
 	}
 
 }
