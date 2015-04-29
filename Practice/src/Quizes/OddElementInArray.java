@@ -2,7 +2,7 @@ package Quizes;
 
 import java.util.*;
 
-// Find odd element in array
+// Find odd element in array of T
  
 public class OddElementInArray {
 

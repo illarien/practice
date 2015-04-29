@@ -28,10 +28,6 @@ public class FindUniqElement {
 	
 	public static void main(String[] args) {
 		final List<Integer> lin = new LinkedList<Integer>(Arrays.asList(1,2,3,2,3,1,7));
-		
 		find(lin);
-		
-
 	}
-
 }

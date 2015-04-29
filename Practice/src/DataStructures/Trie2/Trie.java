@@ -1,14 +1,10 @@
 package DataStructures.Trie2;
 
-import java.util.HashMap;
 import java.util.HashSet;
 
 public class Trie<T> {
 	
 	private Node<T> root = new Node<T>((T) "ROOT");
-	
-	public Trie () {
-	}
 	
 	public Node<T> getRoot() {
 		return root;
@@ -22,7 +18,7 @@ public class Trie<T> {
 		}
 		
 		char[] k = key.toCharArray();
-		for (int i =0; i < k.length; i++) {
+		for (int i = 0; i < k.length; i++) {
 			Node<T> tmp = pointer.getNode(k[i]);
 			if (tmp == null) {
 				pointer.addChild(k[i], (T)(""+k[i]) );

@@ -11,7 +11,7 @@ public class Brackets {
 	}
 	
 	public static void permutation(String pref, String str) {
-		int n = str.length();
+		final int n = str.length();
 
 		if (n == 0) {						
 			if (checkBrackets(pref)) { hs.add(pref);}
@@ -24,7 +24,7 @@ public class Brackets {
 	
 	
 	
-	public static boolean checkBrackets (String str) {
+	public static boolean checkBrackets (final String str) {
 		if (str.length() < 2) { return false; }
 		//System.out.println(str);
 		Stack<Character> stack = new Stack<Character>();

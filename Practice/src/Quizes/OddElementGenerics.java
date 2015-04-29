@@ -5,7 +5,7 @@ import java.util.HashSet;
 public class OddElementGenerics {
 
 	public static Integer[] integ = {1,2,3,4,3,2,4};
-	public static String[] words = {"a", "b","c","a","b"};
+	public static String[] words = {"a","b","c","a","b"};
 	public static Object[] nul;
 	
 	
@@ -30,9 +30,9 @@ public class OddElementGenerics {
 	
 	
 	public static void main(String[] args) {
-		System.out.println(getOddElement(integ));
-		System.out.println(getOddElement(words));
-		System.out.println(getOddElement(nul));
+		System.out.println("Integers: " + getOddElement(integ));
+		System.out.println("Strings: " + getOddElement(words));
+		System.out.println("null: " + getOddElement(nul));
 		
 		String hi = "Hello World";
 		System.out.println(
