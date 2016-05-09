@@ -28,6 +28,8 @@ public class Decoder {
 		printNodes (root);
 		//System.out.println(root.toString());
 		//System.out.println(root.leftChild);
+		System.out.println("-----");
+		tree.levelOrderTraversal(root);
 	}
 
 }

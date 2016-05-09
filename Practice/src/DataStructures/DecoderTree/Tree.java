@@ -1,5 +1,7 @@
 package DataStructures.DecoderTree;
 
+import java.util.ArrayList;
+
 public class Tree {
 	Node root;
 
@@ -53,7 +55,54 @@ public class Tree {
 			System.out.println(focusNode);
 		}
 	}
+	
+	public void levelOrderTraversal(Node focusNode) {
+		if (focusNode == null) {
+			throw new IllegalArgumentException();
+		}
+		ArrayList<Node> currentLevel = new ArrayList<Node>();
+		currentLevel.add(focusNode);
+		
+		while(!currentLevel.isEmpty()) {
+			ArrayList<Node> nextLevel = new ArrayList<Node>();
+			for (Node node: currentLevel) {
+				System.out.print(node + ", ");
+				if (node.leftChild != null) {
+					nextLevel.add(node.leftChild);
+				}
+				if (node.rightChild != null) {
+					nextLevel.add(node.rightChild);
+				}
+			}
+			System.out.println("");
+			currentLevel = nextLevel;
+		}
+	}
+	
+	public Node findLowestCommonAncestor(Node node, Node p, Node q) {
+        if (node == null) {
+        	return null;
+        }
+        if (covers(node.leftChild, p) && covers(node.leftChild, q)) {
+        	return findLowestCommonAncestor(node.leftChild, p, q);
+        } else if (covers(node.rightChild, p) && covers(node.rightChild, q)) {
+        	return findLowestCommonAncestor(node.rightChild, p, q);
+        }
 
+        return node;
+	}
+
+    private boolean covers(Node node, Node p) {
+        if (node == null) {
+        	return false;
+        }
+        if (p.key == node.key) {
+        	return true;
+        }
+        return covers(node.leftChild, p) || covers(node.rightChild, p);
+    }
+
+    
 	public Node findNode(int key) {
 		Node focusNode = root;
 		while (focusNode.key != key) {
@@ -84,5 +133,7 @@ public class Tree {
 		// Find the node with key 75
 		//System.out.println("\nNode with the key 75");
 		//System.out.println(theTree.findNode(75));
+		System.out.println("-----");
+		System.out.println(theTree.findLowestCommonAncestor(theTree.root, theTree.findNode(15), theTree.findNode(85)));
 	}
 }
