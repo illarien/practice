@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 
 
@@ -33,7 +34,7 @@ public class LogParserTF {
 	         return result;
 	     }
 	     
-	     Pattenrn ip = new Pattern("^\d{1-3}\.\d{1-3}\.\d{1-3}\.\d{1-3}");
+	     Pattern ip = new Pattern(""); //"^\d{1-3}\.\d{1-3}\.\d{1-3}\.\d{1-3}");
 	     Regex pattern = ip.compile();
 	     
 	     
@@ -43,7 +44,7 @@ public class LogParserTF {
 	             String ip = parts[0];
 	             
 	             for(String part: parts) {
-	                 if (part.startWith(" /")) {
+	                 if (part.startsWith(" /")) {
 	                     if (part.contains("?")) {
 	                         String[] subpart = part.split("?");
 	                         addToMap(result, ip, subpart[0]);
@@ -68,11 +69,4 @@ public class LogParserTF {
 	         map.put(key, list);
 	     }
 	 }
-	 
-	 
-	
-	
-	
-	
-
 }
