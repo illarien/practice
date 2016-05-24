@@ -1,6 +1,6 @@
 package Quizes.Strings;
 
-public class StringBalancedLine2 {
+public class StringBalancedLine {
 	
 	private static boolean isBalanced(String input) {
 		if (input == null) {
@@ -39,5 +39,4 @@ public class StringBalancedLine2 {
 		System.out.println(isBalanced(s3));
 		System.out.println(isBalanced(s4));
 	}
-
 }

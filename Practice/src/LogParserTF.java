@@ -34,12 +34,14 @@ public class LogParserTF {
 	         return result;
 	     }
 	     
-	     Pattern ip = new Pattern(""); //"^\d{1-3}\.\d{1-3}\.\d{1-3}\.\d{1-3}");
-	     Regex pattern = ip.compile();
+//	     Pattern ip = Pattern.compile(""); // \^\\d\{1-3\}\\.\\d\{1-3\}\\.\\d\{1-3\}\\.\d\{1-3\}");
+//	     Regex pattern = ip.compile();
+	     
+	     boolean b = Pattern.matches("^\\d{1-3}\\.\\d{1-3}\\.d{1-3}\\.\\d{1-3}", "aaaaab");
 	     
 	     
 	     for (String line: lines) {
-	         if (line.match(patten))( {
+	         if (Pattern.matches("^\\d{1-3}\\.\\d{1-3}\\.d{1-3}\\.\\d{1-3}", line)) {
 	             String[] parts = line.split(" ");
 	             String ip = parts[0];
 	             

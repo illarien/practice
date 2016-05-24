@@ -2,8 +2,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-/**
-    LRU Cache
+/** LRU Cache
     class LRU {
         int capacity = 3;
         void set(int key, int value);

@@ -20,9 +20,7 @@ public class Data2 {
 	}
 	  
 	private HashMap<Character, Integer> getFP(String in) {
-		
 		HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
-		
 		for (int i = 0; i < in.length(); i++) {
 			if (hm.get(in.charAt(i)) != null) {
 				hm.put(in.charAt(i), hm.get(in.charAt(i))+1 );
@@ -32,5 +30,4 @@ public class Data2 {
 		}
 		return hm;
 	}
-
 }

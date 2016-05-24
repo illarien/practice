@@ -6,6 +6,9 @@ import java.util.Comparator;
 
 public class StringsLexicographCompare {
 	
+	/**
+	 * Comparator
+	 */
 	static class LexComparator implements Comparator<String> {
 		public int compare(String s1, String s2) {
 			int i=0;
@@ -22,8 +25,6 @@ public class StringsLexicographCompare {
 		}
 	}
 	
-	
-
 	public static void main(String[] args) {
 		String s1 = "abcderrhrh";
 		String s2 = "bcder";

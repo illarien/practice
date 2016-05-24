@@ -1,14 +1,11 @@
-package QuizesOld;
-
-// BalancedLine - stack
+package Quizes.Strings;
 
 import java.util.*;
 
-
-
-public class BalancedLine {
-
-	
+/**
+ *  BalancedLine - stack
+ */
+public class StringBalancedLineStack {
 	
 	public static void main(String[] args) {
 		String str = "a{sdfs(dsf)[s]}";
@@ -36,7 +33,6 @@ public class BalancedLine {
 					break;
 					}
 			}
-		
 			
 			if ( ar[i].equals("}") ) {
 				tmp = st.pop();
@@ -47,14 +43,10 @@ public class BalancedLine {
 				}
 			}
 			
-			
-			System.out.println("Stack: " + st);
+//			System.out.println("Stack: " + st);
 		}
 	
 		System.out.println("Stack: " + st);
 		System.out.println("Size: " + st.size());
-		
-
 	}
-
 }

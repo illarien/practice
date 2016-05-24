@@ -1,5 +1,8 @@
 package Validations;
 
+/**
+ * Object#1 that implements IValidator
+ */
 public class ObjRP implements IValidator{
 
 	@Override
@@ -7,7 +10,4 @@ public class ObjRP implements IValidator{
 		System.out.println("RP-true");
 		return true;
 	}
-
-	
-	
 }

@@ -2,12 +2,20 @@ package Quizes.Strings;
 
 public class StringPermutation {
 
-	
-	public static void permutation(String str){
+	/**
+	 * Main method
+	 * @param str
+	 */
+	private static void permutation(String str){
 		permutation("", str);
 	}
 	
-	public static void permutation(String pref, String str) {
+	/**
+	 * Recursion permutation
+	 * @param pref
+	 * @param str
+	 */
+	private static void permutation(String pref, String str) {
 		int n = str.length();
 		if (n == 0) {
 			System.out.println(pref);
@@ -19,12 +27,8 @@ public class StringPermutation {
 	}
 	
 	
-	
-	
-	
 	public static void main(String[] args) {
 		permutation("abcdef");
 
 	}
-
 }

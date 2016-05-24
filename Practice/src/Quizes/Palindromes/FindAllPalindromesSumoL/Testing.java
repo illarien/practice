@@ -7,8 +7,6 @@ import java.util.Arrays;
 import org.junit.Test;
 
 public class Testing {
-
-
 	
 	@Test
 	public void testA1() {
@@ -21,5 +19,4 @@ public class Testing {
 		
 		assertArrayEquals(a1, a2);
 	}
-	
 }
