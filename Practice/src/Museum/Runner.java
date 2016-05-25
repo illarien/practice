@@ -61,10 +61,9 @@ public class Runner {
         System.out.println();
         evaluate(museum);
         printMuseum(museum);
-        System.out.println();
-        
+//        System.out.println();
 //        checkMuseum(museum);
-        printMuseum(museum);
+//        printMuseum(museum);
     }
 
 }

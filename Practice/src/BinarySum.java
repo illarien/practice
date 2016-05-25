@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 /**
  * FB 1st phone screen
+ * Improve it later to use ArrayList<Boolean>
  */
 public class BinarySum {
 

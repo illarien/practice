@@ -16,19 +16,8 @@ public class OpenPosition extends Position {
     
     @Override
     public void evaluate(Position[][] museum) {
-        // get List of neigthbours
-        if (this.x  > 0) {
-            neigthbours.add(museum[x-1][y]);
-        }
-        if (this.x < museum.length-2) {
-            neigthbours.add(museum[x+1][y]);
-        }
-        if (this.y  > 0) {
-            neigthbours.add(museum[x][y-1]);
-        }
-        if (this.y < museum.length-2) {
-            neigthbours.add(museum[x][y+1]);
-        }
+        // set List of neigthbours
+        setNeigthbours(museum);
         
         int mindist = Integer.MAX_VALUE;
         for (Position p: neigthbours) {
@@ -47,19 +36,33 @@ public class OpenPosition extends Position {
             }
         }
         this.dist = mindist+1;
-        
     }
-
-	public void checkNeigth(Position[][] museum) {
-		for (Position p: neigthbours) {
-			if (p instanceof OpenPosition) {
-				int tmpDist = ((OpenPosition) p).dist;
-				if ( tmpDist > 0 && (this.dist - tmpDist) >1) {
-					System.out.println("ddd");
-					this.dist = tmpDist+1;
-				}
-			}
-		}
-	}
+    
+    private void setNeigthbours(Position[][] museum) {
+    	if (this.x  > 0) {
+            neigthbours.add(museum[x-1][y]);
+        }
+        if (this.x < museum.length-2) {
+            neigthbours.add(museum[x+1][y]);
+        }
+        if (this.y  > 0) {
+            neigthbours.add(museum[x][y-1]);
+        }
+        if (this.y < museum.length-2) {
+            neigthbours.add(museum[x][y+1]);
+        }
+    }
+    
+// 	public void checkNeigth(Position[][] museum) {
+//		for (Position p: neigthbours) {
+//			if (p instanceof OpenPosition) {
+//				int tmpDist = ((OpenPosition) p).dist;
+//				if ( tmpDist > 0 && (this.dist - tmpDist) >1) {
+//					System.out.println("ddd");
+//					this.dist = tmpDist+1;
+//				}
+//			}
+//		}
+//	}
     
 }
