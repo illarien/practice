@@ -7,13 +7,23 @@ import java.util.ArrayList;
 public class BinarySum {
 
 	public static void main(String[] args) {
-		String s1 = "100", s2 ="1"; // "1101"
+		String s1 = "101", s2 ="1"; // "1101"
 		System.out.println("aaa " + s1 + "+" + s2);
 		System.out.println(addBinary(s1, s2));
 	}
 
 	
-	public static String addBinary(String s1, String s2) {   
+	
+	// fun solution
+	public static String addBinary(String s1, String s2) {
+		int i1 = Integer.parseInt(s1, 2); // 2 for binary
+		int i2 = Integer.parseInt(s2, 2);
+		int sum = i1 + i2;
+		return Integer.toBinaryString(sum);
+	}
+	
+	// First not optimal solution
+	public static String addBinaryOld(String s1, String s2) {   
 	if (s1 == null || s2 == null || s1.isEmpty() || s2.isEmpty()) {
 	      throw new IllegalArgumentException();
 	  }

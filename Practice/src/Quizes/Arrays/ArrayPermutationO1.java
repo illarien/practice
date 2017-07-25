@@ -3,7 +3,7 @@ package Quizes.Arrays;
 
 public class ArrayPermutationO1 {
     
-    private static int[] input = {1,2,3};
+    private static int[] input = {1,2,3,4};
 
     private static void swap(int i, int j) {
          input[i] ^= input[j] ^ (input[j] = input[j] ^ input[i] ^ input[j]);
@@ -38,6 +38,7 @@ public class ArrayPermutationO1 {
         }
     }
     
+    //wrong solution
     private static void permutateInLoop() {
         for(int p1 = 0; p1 < input.length; p1++) {
             for(int p2 = 0; p2 < input.length; p2++) {
@@ -53,9 +54,9 @@ public class ArrayPermutationO1 {
         printArray(input);
         System.out.println(numberOfPermutations(input.length));
         System.out.println("-----");
-//      permutateRecursevly(0, input.length-1);
+      permutateRecursevly(0, input.length-1);
         System.out.println("-----");
-        permutateInLoop();
+//        permutateInLoop();
         
     }
 }

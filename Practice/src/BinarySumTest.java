@@ -108,7 +108,7 @@ public class BinarySumTest {
 	public void test12() {
 		String s1 = "111", s2 ="111";
 		String expected = bs.addBinary(s1, s2);
-		assertEquals(expected, "1000");
+		assertEquals(expected, "1110");
 	}
 	
 	
